@@ -30,7 +30,7 @@ task :run do
 
     application = repo_name.gsub('alphagov/', '')
     if unpdeployed_pull_requests.size == 1
-      messages << "- <https://github.com/#{repo_name}|#{application}> has <#{compare[:html_url]}|#{unpdeployed_pull_requests.size} undeployed pull request> which was merged #{days_ago} days ago. It includes commits by #{committer_names}."
+      messages << "- <https://github.com/#{repo_name}|#{application}> has <#{compare[:html_url]}|1 undeployed pull request> which was merged #{days_ago} days ago. It includes commits by #{committer_names}."
     else
       messages << "- <https://github.com/#{repo_name}|#{application}> has <#{compare[:html_url]}|#{unpdeployed_pull_requests.size} undeployed pull requests>, the oldest of which was merged #{days_ago} days ago. It includes commits by #{committer_names}."
     end
