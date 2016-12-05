@@ -43,7 +43,7 @@ task :run do
     icon_emoji: ":badger:",
     text: message,
     mrkdwn: true,
-    channel: '#bot-testing',
+    channel: '#2ndline',
   }
 
   HTTP.post(ENV["BADGER_SLACK_WEBHOOK_URL"], body: JSON.dump(message_payload))
