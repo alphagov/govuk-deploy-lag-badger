@@ -1,0 +1,107 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.github.com/repos/alphagov/business-support-api/compare/deployed-to-production...master
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json
+      User-Agent:
+      - Octokit Ruby Gem 4.6.2
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Tue, 06 Dec 2016 08:53:45 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '60'
+      X-Ratelimit-Remaining:
+      - '9'
+      X-Ratelimit-Reset:
+      - '1481016743'
+      Cache-Control:
+      - public, max-age=60, s-maxage=60
+      Vary:
+      - Accept
+      - Accept-Encoding
+      Etag:
+      - W/"1c7bbcaab2d8bee291308dd5f89915eb"
+      Last-Modified:
+      - Tue, 25 Oct 2016 08:33:15 GMT
+      X-Github-Media-Type:
+      - github.v3; format=json
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Security-Policy:
+      - default-src 'none'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Served-By:
+      - 474556b853193c38f1b14328ce2d1b7d
+      X-Github-Request-Id:
+      - 33064296:629B:4D796C6:58467C98
+    body:
+      encoding: ASCII-8BIT
+      string: '{"url":"https://api.github.com/repos/alphagov/business-support-api/compare/deployed-to-production...master","html_url":"https://github.com/alphagov/business-support-api/compare/deployed-to-production...master","permalink_url":"https://github.com/alphagov/business-support-api/compare/alphagov:69e6a33...alphagov:4bc1b67","diff_url":"https://github.com/alphagov/business-support-api/compare/deployed-to-production...master.diff","patch_url":"https://github.com/alphagov/business-support-api/compare/deployed-to-production...master.patch","base_commit":{"sha":"69e6a33d72f8d5e5fd3f51ea7920437a27d2a36b","commit":{"author":{"name":"Simon","email":"sihugh@users.noreply.github.com","date":"2016-09-29T09:47:35Z"},"committer":{"name":"GitHub","email":"noreply@github.com","date":"2016-09-29T09:47:35Z"},"message":"Merge
+        pull request #40 from alphagov/update-gds-api-adapters-behaviour\n\nUse new
+        GDS API Adapters behaviour","tree":{"sha":"f02efa5525a413023ac67bbd9a514e941b3d6d35","url":"https://api.github.com/repos/alphagov/business-support-api/git/trees/f02efa5525a413023ac67bbd9a514e941b3d6d35"},"url":"https://api.github.com/repos/alphagov/business-support-api/git/commits/69e6a33d72f8d5e5fd3f51ea7920437a27d2a36b","comment_count":0},"url":"https://api.github.com/repos/alphagov/business-support-api/commits/69e6a33d72f8d5e5fd3f51ea7920437a27d2a36b","html_url":"https://github.com/alphagov/business-support-api/commit/69e6a33d72f8d5e5fd3f51ea7920437a27d2a36b","comments_url":"https://api.github.com/repos/alphagov/business-support-api/commits/69e6a33d72f8d5e5fd3f51ea7920437a27d2a36b/comments","author":{"login":"sihugh","id":773037,"avatar_url":"https://avatars.githubusercontent.com/u/773037?v=3","gravatar_id":"","url":"https://api.github.com/users/sihugh","html_url":"https://github.com/sihugh","followers_url":"https://api.github.com/users/sihugh/followers","following_url":"https://api.github.com/users/sihugh/following{/other_user}","gists_url":"https://api.github.com/users/sihugh/gists{/gist_id}","starred_url":"https://api.github.com/users/sihugh/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/sihugh/subscriptions","organizations_url":"https://api.github.com/users/sihugh/orgs","repos_url":"https://api.github.com/users/sihugh/repos","events_url":"https://api.github.com/users/sihugh/events{/privacy}","received_events_url":"https://api.github.com/users/sihugh/received_events","type":"User","site_admin":false},"committer":{"login":"web-flow","id":19864447,"avatar_url":"https://avatars.githubusercontent.com/u/19864447?v=3","gravatar_id":"","url":"https://api.github.com/users/web-flow","html_url":"https://github.com/web-flow","followers_url":"https://api.github.com/users/web-flow/followers","following_url":"https://api.github.com/users/web-flow/following{/other_user}","gists_url":"https://api.github.com/users/web-flow/gists{/gist_id}","starred_url":"https://api.github.com/users/web-flow/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/web-flow/subscriptions","organizations_url":"https://api.github.com/users/web-flow/orgs","repos_url":"https://api.github.com/users/web-flow/repos","events_url":"https://api.github.com/users/web-flow/events{/privacy}","received_events_url":"https://api.github.com/users/web-flow/received_events","type":"User","site_admin":false},"parents":[{"sha":"76310c01d5a88978567add4e0b9388459185c2e4","url":"https://api.github.com/repos/alphagov/business-support-api/commits/76310c01d5a88978567add4e0b9388459185c2e4","html_url":"https://github.com/alphagov/business-support-api/commit/76310c01d5a88978567add4e0b9388459185c2e4"},{"sha":"e3ec2e29e6ebe3328a702841fd722bfa73813755","url":"https://api.github.com/repos/alphagov/business-support-api/commits/e3ec2e29e6ebe3328a702841fd722bfa73813755","html_url":"https://github.com/alphagov/business-support-api/commit/e3ec2e29e6ebe3328a702841fd722bfa73813755"}]},"merge_base_commit":{"sha":"69e6a33d72f8d5e5fd3f51ea7920437a27d2a36b","commit":{"author":{"name":"Simon","email":"sihugh@users.noreply.github.com","date":"2016-09-29T09:47:35Z"},"committer":{"name":"GitHub","email":"noreply@github.com","date":"2016-09-29T09:47:35Z"},"message":"Merge
+        pull request #40 from alphagov/update-gds-api-adapters-behaviour\n\nUse new
+        GDS API Adapters behaviour","tree":{"sha":"f02efa5525a413023ac67bbd9a514e941b3d6d35","url":"https://api.github.com/repos/alphagov/business-support-api/git/trees/f02efa5525a413023ac67bbd9a514e941b3d6d35"},"url":"https://api.github.com/repos/alphagov/business-support-api/git/commits/69e6a33d72f8d5e5fd3f51ea7920437a27d2a36b","comment_count":0},"url":"https://api.github.com/repos/alphagov/business-support-api/commits/69e6a33d72f8d5e5fd3f51ea7920437a27d2a36b","html_url":"https://github.com/alphagov/business-support-api/commit/69e6a33d72f8d5e5fd3f51ea7920437a27d2a36b","comments_url":"https://api.github.com/repos/alphagov/business-support-api/commits/69e6a33d72f8d5e5fd3f51ea7920437a27d2a36b/comments","author":{"login":"sihugh","id":773037,"avatar_url":"https://avatars.githubusercontent.com/u/773037?v=3","gravatar_id":"","url":"https://api.github.com/users/sihugh","html_url":"https://github.com/sihugh","followers_url":"https://api.github.com/users/sihugh/followers","following_url":"https://api.github.com/users/sihugh/following{/other_user}","gists_url":"https://api.github.com/users/sihugh/gists{/gist_id}","starred_url":"https://api.github.com/users/sihugh/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/sihugh/subscriptions","organizations_url":"https://api.github.com/users/sihugh/orgs","repos_url":"https://api.github.com/users/sihugh/repos","events_url":"https://api.github.com/users/sihugh/events{/privacy}","received_events_url":"https://api.github.com/users/sihugh/received_events","type":"User","site_admin":false},"committer":{"login":"web-flow","id":19864447,"avatar_url":"https://avatars.githubusercontent.com/u/19864447?v=3","gravatar_id":"","url":"https://api.github.com/users/web-flow","html_url":"https://github.com/web-flow","followers_url":"https://api.github.com/users/web-flow/followers","following_url":"https://api.github.com/users/web-flow/following{/other_user}","gists_url":"https://api.github.com/users/web-flow/gists{/gist_id}","starred_url":"https://api.github.com/users/web-flow/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/web-flow/subscriptions","organizations_url":"https://api.github.com/users/web-flow/orgs","repos_url":"https://api.github.com/users/web-flow/repos","events_url":"https://api.github.com/users/web-flow/events{/privacy}","received_events_url":"https://api.github.com/users/web-flow/received_events","type":"User","site_admin":false},"parents":[{"sha":"76310c01d5a88978567add4e0b9388459185c2e4","url":"https://api.github.com/repos/alphagov/business-support-api/commits/76310c01d5a88978567add4e0b9388459185c2e4","html_url":"https://github.com/alphagov/business-support-api/commit/76310c01d5a88978567add4e0b9388459185c2e4"},{"sha":"e3ec2e29e6ebe3328a702841fd722bfa73813755","url":"https://api.github.com/repos/alphagov/business-support-api/commits/e3ec2e29e6ebe3328a702841fd722bfa73813755","html_url":"https://github.com/alphagov/business-support-api/commit/e3ec2e29e6ebe3328a702841fd722bfa73813755"}]},"status":"ahead","ahead_by":2,"behind_by":0,"total_commits":2,"commits":[{"sha":"e75eebdcc70054f5048c41d6db24a533d63d3220","commit":{"author":{"name":"Murray
+        Steele","email":"muz@h-lame.com","date":"2016-10-19T13:58:59Z"},"committer":{"name":"Murray
+        Steele","email":"muz@h-lame.com","date":"2016-10-19T13:58:59Z"},"message":"Handle
+        404 response from imminence when getting areas for postcode\n\nAs noted in
+        the comment, imminence doesn''t actually respond with an HTTP\n404 if the
+        provided postcode doesn''t exist.  It returns a 200 with no\nresults, and
+        a 404 in the _response_info.status.  This is unlikely to be\nhow we really
+        want imminence to behave and if it does change the old code\nwould break (NoMethodError
+        for [] on nil where we try to get [\"results\"]\nfrom the area_respones).  We
+        add a spec and fix the implementation to\navoid this.","tree":{"sha":"02eefe002ae5935464c74ac136cb1a44d95f4620","url":"https://api.github.com/repos/alphagov/business-support-api/git/trees/02eefe002ae5935464c74ac136cb1a44d95f4620"},"url":"https://api.github.com/repos/alphagov/business-support-api/git/commits/e75eebdcc70054f5048c41d6db24a533d63d3220","comment_count":0},"url":"https://api.github.com/repos/alphagov/business-support-api/commits/e75eebdcc70054f5048c41d6db24a533d63d3220","html_url":"https://github.com/alphagov/business-support-api/commit/e75eebdcc70054f5048c41d6db24a533d63d3220","comments_url":"https://api.github.com/repos/alphagov/business-support-api/commits/e75eebdcc70054f5048c41d6db24a533d63d3220/comments","author":{"login":"h-lame","id":608,"avatar_url":"https://avatars.githubusercontent.com/u/608?v=3","gravatar_id":"","url":"https://api.github.com/users/h-lame","html_url":"https://github.com/h-lame","followers_url":"https://api.github.com/users/h-lame/followers","following_url":"https://api.github.com/users/h-lame/following{/other_user}","gists_url":"https://api.github.com/users/h-lame/gists{/gist_id}","starred_url":"https://api.github.com/users/h-lame/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/h-lame/subscriptions","organizations_url":"https://api.github.com/users/h-lame/orgs","repos_url":"https://api.github.com/users/h-lame/repos","events_url":"https://api.github.com/users/h-lame/events{/privacy}","received_events_url":"https://api.github.com/users/h-lame/received_events","type":"User","site_admin":false},"committer":{"login":"h-lame","id":608,"avatar_url":"https://avatars.githubusercontent.com/u/608?v=3","gravatar_id":"","url":"https://api.github.com/users/h-lame","html_url":"https://github.com/h-lame","followers_url":"https://api.github.com/users/h-lame/followers","following_url":"https://api.github.com/users/h-lame/following{/other_user}","gists_url":"https://api.github.com/users/h-lame/gists{/gist_id}","starred_url":"https://api.github.com/users/h-lame/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/h-lame/subscriptions","organizations_url":"https://api.github.com/users/h-lame/orgs","repos_url":"https://api.github.com/users/h-lame/repos","events_url":"https://api.github.com/users/h-lame/events{/privacy}","received_events_url":"https://api.github.com/users/h-lame/received_events","type":"User","site_admin":false},"parents":[{"sha":"69e6a33d72f8d5e5fd3f51ea7920437a27d2a36b","url":"https://api.github.com/repos/alphagov/business-support-api/commits/69e6a33d72f8d5e5fd3f51ea7920437a27d2a36b","html_url":"https://github.com/alphagov/business-support-api/commit/69e6a33d72f8d5e5fd3f51ea7920437a27d2a36b"}]},{"sha":"4bc1b673c26f91492c2291cb8b399293ad632cb2","commit":{"author":{"name":"Simon","email":"sihugh@users.noreply.github.com","date":"2016-10-25T08:33:15Z"},"committer":{"name":"GitHub","email":"noreply@github.com","date":"2016-10-25T08:33:15Z"},"message":"Merge
+        pull request #41 from alphagov/fix-response-handling-for-missing-postcode\n\nHandle
+        404 response from imminence when getting areas for postcode","tree":{"sha":"02eefe002ae5935464c74ac136cb1a44d95f4620","url":"https://api.github.com/repos/alphagov/business-support-api/git/trees/02eefe002ae5935464c74ac136cb1a44d95f4620"},"url":"https://api.github.com/repos/alphagov/business-support-api/git/commits/4bc1b673c26f91492c2291cb8b399293ad632cb2","comment_count":0},"url":"https://api.github.com/repos/alphagov/business-support-api/commits/4bc1b673c26f91492c2291cb8b399293ad632cb2","html_url":"https://github.com/alphagov/business-support-api/commit/4bc1b673c26f91492c2291cb8b399293ad632cb2","comments_url":"https://api.github.com/repos/alphagov/business-support-api/commits/4bc1b673c26f91492c2291cb8b399293ad632cb2/comments","author":{"login":"sihugh","id":773037,"avatar_url":"https://avatars.githubusercontent.com/u/773037?v=3","gravatar_id":"","url":"https://api.github.com/users/sihugh","html_url":"https://github.com/sihugh","followers_url":"https://api.github.com/users/sihugh/followers","following_url":"https://api.github.com/users/sihugh/following{/other_user}","gists_url":"https://api.github.com/users/sihugh/gists{/gist_id}","starred_url":"https://api.github.com/users/sihugh/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/sihugh/subscriptions","organizations_url":"https://api.github.com/users/sihugh/orgs","repos_url":"https://api.github.com/users/sihugh/repos","events_url":"https://api.github.com/users/sihugh/events{/privacy}","received_events_url":"https://api.github.com/users/sihugh/received_events","type":"User","site_admin":false},"committer":{"login":"web-flow","id":19864447,"avatar_url":"https://avatars.githubusercontent.com/u/19864447?v=3","gravatar_id":"","url":"https://api.github.com/users/web-flow","html_url":"https://github.com/web-flow","followers_url":"https://api.github.com/users/web-flow/followers","following_url":"https://api.github.com/users/web-flow/following{/other_user}","gists_url":"https://api.github.com/users/web-flow/gists{/gist_id}","starred_url":"https://api.github.com/users/web-flow/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/web-flow/subscriptions","organizations_url":"https://api.github.com/users/web-flow/orgs","repos_url":"https://api.github.com/users/web-flow/repos","events_url":"https://api.github.com/users/web-flow/events{/privacy}","received_events_url":"https://api.github.com/users/web-flow/received_events","type":"User","site_admin":false},"parents":[{"sha":"69e6a33d72f8d5e5fd3f51ea7920437a27d2a36b","url":"https://api.github.com/repos/alphagov/business-support-api/commits/69e6a33d72f8d5e5fd3f51ea7920437a27d2a36b","html_url":"https://github.com/alphagov/business-support-api/commit/69e6a33d72f8d5e5fd3f51ea7920437a27d2a36b"},{"sha":"e75eebdcc70054f5048c41d6db24a533d63d3220","url":"https://api.github.com/repos/alphagov/business-support-api/commits/e75eebdcc70054f5048c41d6db24a533d63d3220","html_url":"https://github.com/alphagov/business-support-api/commit/e75eebdcc70054f5048c41d6db24a533d63d3220"}]}],"files":[{"sha":"a6f7f88898e27658875ac41d1791cf3eec690795","filename":"app/models/scheme.rb","status":"modified","additions":2,"deletions":4,"changes":6,"blob_url":"https://github.com/alphagov/business-support-api/blob/4bc1b673c26f91492c2291cb8b399293ad632cb2/app/models/scheme.rb","raw_url":"https://github.com/alphagov/business-support-api/raw/4bc1b673c26f91492c2291cb8b399293ad632cb2/app/models/scheme.rb","contents_url":"https://api.github.com/repos/alphagov/business-support-api/contents/app/models/scheme.rb?ref=4bc1b673c26f91492c2291cb8b399293ad632cb2","patch":"@@
+        -49,14 +49,12 @@ def as_json(options={})\n   end\n \n   def self.area_identifiers(postcode)\n-  begin\n     areas_response
+        = imminence_api.areas_for_postcode(postcode)\n-  rescue GdsApi::HTTPNotFound,
+        GdsApi::HTTPGone\n-    []\n-  end\n     areas = areas_response[\"results\"].map
+        do |area|\n       area[\"codes\"][\"gss\"] if WHITELISTED_AREA_CODES.include?(area[\"type\"])\n     end\n     areas.reject(&:blank?).join(\",\")\n+  rescue
+        GdsApi::HTTPNotFound, GdsApi::HTTPGone\n+    []\n   end\n end"},{"sha":"09313b41c91d90b447fc8a6aea1b8f5019e646a2","filename":"spec/features/search_business_support_spec.rb","status":"modified","additions":16,"deletions":0,"changes":16,"blob_url":"https://github.com/alphagov/business-support-api/blob/4bc1b673c26f91492c2291cb8b399293ad632cb2/spec/features/search_business_support_spec.rb","raw_url":"https://github.com/alphagov/business-support-api/raw/4bc1b673c26f91492c2291cb8b399293ad632cb2/spec/features/search_business_support_spec.rb","contents_url":"https://api.github.com/repos/alphagov/business-support-api/contents/spec/features/search_business_support_spec.rb?ref=4bc1b673c26f91492c2291cb8b399293ad632cb2","patch":"@@
+        -95,5 +95,21 @@\n       expect(parsed_response[\"total\"]).to eq(0)\n     end\n
+        \n+    it \"should return no results with a postcode imminence doesn''t know
+        about\" do\n+      # NOTE: If we ask imminence about apostcode that it doesn''t
+        know about\n+      # it will actually return an HTTP 200 where the json response
+        contains\n+      # an empty set of areas and a \"status\":\"404\" in \"_response_info\".\n+      #
+        This probably isn''t a intentional design choice, so this spec protects\n+      #
+        us against that behaviour changing to return a full HTTP 404.\n+      stub_request(:get,
+        %r{\\A#{Plek.current.find(''imminence'')}/areas/WC2B%206SE\\.json})\n+        .to_return(status:
+        404)\n+      facets = { \"area_gss_codes\" => [\"E15000007\", \"W08000001\",
+        \"S15000001\"] }\n+      content_api_has_business_support_scheme(@graduate_start_up_attrs.merge(facets),
+        facets)\n+\n+      visit \"/business-support-schemes.json?postcode=WC2B%206SE\"\n+\n+      parsed_response
+        = JSON.parse(page.body)\n+      expect(parsed_response[\"total\"]).to eq(0)\n+    end\n   end\n
+        end"}]}'
+    http_version: 
+  recorded_at: Tue, 06 Dec 2016 12:00:00 GMT
+recorded_with: VCR 2.9.3

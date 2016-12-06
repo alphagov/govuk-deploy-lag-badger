@@ -1,0 +1,80 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.github.com/repos/alphagov/rummager/compare/deployed-to-production...master
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json
+      User-Agent:
+      - Octokit Ruby Gem 4.6.2
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Tue, 06 Dec 2016 08:41:14 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '60'
+      X-Ratelimit-Remaining:
+      - '49'
+      X-Ratelimit-Reset:
+      - '1481016743'
+      Cache-Control:
+      - public, max-age=60, s-maxage=60
+      Vary:
+      - Accept
+      - Accept-Encoding
+      Etag:
+      - W/"d36794c0f21b8ae48a5535d8e46c322e"
+      Last-Modified:
+      - Fri, 02 Dec 2016 15:36:10 GMT
+      X-Github-Media-Type:
+      - github.v3; format=json
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Security-Policy:
+      - default-src 'none'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Served-By:
+      - 139317cebd6caf9cd03889139437f00b
+      X-Github-Request-Id:
+      - 33064296:62AB:157014A8:584679A9
+    body:
+      encoding: ASCII-8BIT
+      string: '{"url":"https://api.github.com/repos/alphagov/rummager/compare/deployed-to-production...master","html_url":"https://github.com/alphagov/rummager/compare/deployed-to-production...master","permalink_url":"https://github.com/alphagov/rummager/compare/alphagov:34ce272...alphagov:34ce272","diff_url":"https://github.com/alphagov/rummager/compare/deployed-to-production...master.diff","patch_url":"https://github.com/alphagov/rummager/compare/deployed-to-production...master.patch","base_commit":{"sha":"34ce272a02b979bd6d47ffa7405eae1074e86e30","commit":{"author":{"name":"Carlos
+        Vilhena","email":"carlosvilhena@gmail.com","date":"2016-12-02T15:36:10Z"},"committer":{"name":"GitHub","email":"noreply@github.com","date":"2016-12-02T15:36:10Z"},"message":"Merge
+        pull request #724 from alphagov/raise-for-super-high-page-count\n\nDon''t
+        allow extremely high value for `page`","tree":{"sha":"797c3e2a9339cad3d0faa2c50989b60255075c11","url":"https://api.github.com/repos/alphagov/rummager/git/trees/797c3e2a9339cad3d0faa2c50989b60255075c11"},"url":"https://api.github.com/repos/alphagov/rummager/git/commits/34ce272a02b979bd6d47ffa7405eae1074e86e30","comment_count":0},"url":"https://api.github.com/repos/alphagov/rummager/commits/34ce272a02b979bd6d47ffa7405eae1074e86e30","html_url":"https://github.com/alphagov/rummager/commit/34ce272a02b979bd6d47ffa7405eae1074e86e30","comments_url":"https://api.github.com/repos/alphagov/rummager/commits/34ce272a02b979bd6d47ffa7405eae1074e86e30/comments","author":{"login":"carvil","id":416701,"avatar_url":"https://avatars.githubusercontent.com/u/416701?v=3","gravatar_id":"","url":"https://api.github.com/users/carvil","html_url":"https://github.com/carvil","followers_url":"https://api.github.com/users/carvil/followers","following_url":"https://api.github.com/users/carvil/following{/other_user}","gists_url":"https://api.github.com/users/carvil/gists{/gist_id}","starred_url":"https://api.github.com/users/carvil/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/carvil/subscriptions","organizations_url":"https://api.github.com/users/carvil/orgs","repos_url":"https://api.github.com/users/carvil/repos","events_url":"https://api.github.com/users/carvil/events{/privacy}","received_events_url":"https://api.github.com/users/carvil/received_events","type":"User","site_admin":false},"committer":{"login":"web-flow","id":19864447,"avatar_url":"https://avatars.githubusercontent.com/u/19864447?v=3","gravatar_id":"","url":"https://api.github.com/users/web-flow","html_url":"https://github.com/web-flow","followers_url":"https://api.github.com/users/web-flow/followers","following_url":"https://api.github.com/users/web-flow/following{/other_user}","gists_url":"https://api.github.com/users/web-flow/gists{/gist_id}","starred_url":"https://api.github.com/users/web-flow/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/web-flow/subscriptions","organizations_url":"https://api.github.com/users/web-flow/orgs","repos_url":"https://api.github.com/users/web-flow/repos","events_url":"https://api.github.com/users/web-flow/events{/privacy}","received_events_url":"https://api.github.com/users/web-flow/received_events","type":"User","site_admin":false},"parents":[{"sha":"b873f2b567818d4ef82cef4b33d1b6f973f459da","url":"https://api.github.com/repos/alphagov/rummager/commits/b873f2b567818d4ef82cef4b33d1b6f973f459da","html_url":"https://github.com/alphagov/rummager/commit/b873f2b567818d4ef82cef4b33d1b6f973f459da"},{"sha":"a037587bf1fecb089746a16efbe02776e5f9d08d","url":"https://api.github.com/repos/alphagov/rummager/commits/a037587bf1fecb089746a16efbe02776e5f9d08d","html_url":"https://github.com/alphagov/rummager/commit/a037587bf1fecb089746a16efbe02776e5f9d08d"}]},"merge_base_commit":{"sha":"34ce272a02b979bd6d47ffa7405eae1074e86e30","commit":{"author":{"name":"Carlos
+        Vilhena","email":"carlosvilhena@gmail.com","date":"2016-12-02T15:36:10Z"},"committer":{"name":"GitHub","email":"noreply@github.com","date":"2016-12-02T15:36:10Z"},"message":"Merge
+        pull request #724 from alphagov/raise-for-super-high-page-count\n\nDon''t
+        allow extremely high value for `page`","tree":{"sha":"797c3e2a9339cad3d0faa2c50989b60255075c11","url":"https://api.github.com/repos/alphagov/rummager/git/trees/797c3e2a9339cad3d0faa2c50989b60255075c11"},"url":"https://api.github.com/repos/alphagov/rummager/git/commits/34ce272a02b979bd6d47ffa7405eae1074e86e30","comment_count":0},"url":"https://api.github.com/repos/alphagov/rummager/commits/34ce272a02b979bd6d47ffa7405eae1074e86e30","html_url":"https://github.com/alphagov/rummager/commit/34ce272a02b979bd6d47ffa7405eae1074e86e30","comments_url":"https://api.github.com/repos/alphagov/rummager/commits/34ce272a02b979bd6d47ffa7405eae1074e86e30/comments","author":{"login":"carvil","id":416701,"avatar_url":"https://avatars.githubusercontent.com/u/416701?v=3","gravatar_id":"","url":"https://api.github.com/users/carvil","html_url":"https://github.com/carvil","followers_url":"https://api.github.com/users/carvil/followers","following_url":"https://api.github.com/users/carvil/following{/other_user}","gists_url":"https://api.github.com/users/carvil/gists{/gist_id}","starred_url":"https://api.github.com/users/carvil/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/carvil/subscriptions","organizations_url":"https://api.github.com/users/carvil/orgs","repos_url":"https://api.github.com/users/carvil/repos","events_url":"https://api.github.com/users/carvil/events{/privacy}","received_events_url":"https://api.github.com/users/carvil/received_events","type":"User","site_admin":false},"committer":{"login":"web-flow","id":19864447,"avatar_url":"https://avatars.githubusercontent.com/u/19864447?v=3","gravatar_id":"","url":"https://api.github.com/users/web-flow","html_url":"https://github.com/web-flow","followers_url":"https://api.github.com/users/web-flow/followers","following_url":"https://api.github.com/users/web-flow/following{/other_user}","gists_url":"https://api.github.com/users/web-flow/gists{/gist_id}","starred_url":"https://api.github.com/users/web-flow/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/web-flow/subscriptions","organizations_url":"https://api.github.com/users/web-flow/orgs","repos_url":"https://api.github.com/users/web-flow/repos","events_url":"https://api.github.com/users/web-flow/events{/privacy}","received_events_url":"https://api.github.com/users/web-flow/received_events","type":"User","site_admin":false},"parents":[{"sha":"b873f2b567818d4ef82cef4b33d1b6f973f459da","url":"https://api.github.com/repos/alphagov/rummager/commits/b873f2b567818d4ef82cef4b33d1b6f973f459da","html_url":"https://github.com/alphagov/rummager/commit/b873f2b567818d4ef82cef4b33d1b6f973f459da"},{"sha":"a037587bf1fecb089746a16efbe02776e5f9d08d","url":"https://api.github.com/repos/alphagov/rummager/commits/a037587bf1fecb089746a16efbe02776e5f9d08d","html_url":"https://github.com/alphagov/rummager/commit/a037587bf1fecb089746a16efbe02776e5f9d08d"}]},"status":"identical","ahead_by":0,"behind_by":0,"total_commits":0,"commits":[],"files":[]}'
+    http_version: 
+  recorded_at: Tue, 06 Dec 2016 08:41:15 GMT
+recorded_with: VCR 2.9.3
