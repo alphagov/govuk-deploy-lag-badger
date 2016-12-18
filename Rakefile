@@ -20,8 +20,19 @@ task :run do
 
     puts message
 
-    if ENV['REALLY_POST_TO_SLACK'] == "1"
-      HTTP.post(ENV["BADGER_SLACK_WEBHOOK_URL"], body: JSON.dump(message_payload))
-    end
+
+    next unless ENV['REALLY_POST_TO_SLACK'] == "1"
+    next unless weekday?
+    next if currently_in_deploy_freeze?
+
+    HTTP.post(ENV["BADGER_SLACK_WEBHOOK_URL"], body: JSON.dump(message_payload))
+  end
+
+  def currently_in_deploy_freeze?
+    Date.today >= Date.parse("2016-12-22") && Date.today <= Date.parse("2017-01-04")
+  end
+
+  def weekday?
+    Date.today.saturday? || Date.today.sunday?
   end
 end
