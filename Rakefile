@@ -1,10 +1,12 @@
 require 'http'
+require 'yaml'
 
 require_relative './lib/message_generator'
 
 task :run do
-  messages = File.read("repos.txt").lines.map(&:chomp).map { |repo_name|
-    MessageGenerator.new(repo_name).message
+  applications = YAML.load(HTTP.get('https://raw.githubusercontent.com/alphagov/govuk-developers/master/data/applications.yml'))
+  messages = applications.map { |application|
+    MessageGenerator.new("alphagov/" + application.fetch('github_repo_name')).message
   }.compact
 
   if messages.any?
