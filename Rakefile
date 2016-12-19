@@ -3,6 +3,14 @@ require 'yaml'
 
 require_relative './lib/message_generator'
 
+def currently_in_deploy_freeze?
+  Date.today >= Date.parse("2016-12-22") && Date.today <= Date.parse("2017-01-04")
+end
+
+def weekend?
+  Date.today.saturday? || Date.today.sunday?
+end
+
 task :run do
   applications = YAML.load(HTTP.get('https://raw.githubusercontent.com/alphagov/govuk-developers/master/data/applications.yml'))
   messages = applications.map { |application|
@@ -22,19 +30,21 @@ task :run do
 
     puts message
 
+    if weekend?
+      puts "Not posting anything, it's the weekend"
+      next
+    end
 
-    next unless ENV['REALLY_POST_TO_SLACK'] == "1"
-    next unless weekday?
-    next if currently_in_deploy_freeze?
+    if currently_in_deploy_freeze?
+      puts "Not posting anything, we're in a deploy freeze period"
+      next
+    end
+
+    if ENV['REALLY_POST_TO_SLACK'] != "1"
+      puts "Not posting anything, this is a dry run"
+      next
+    end
 
     HTTP.post(ENV["BADGER_SLACK_WEBHOOK_URL"], body: JSON.dump(message_payload))
-  end
-
-  def currently_in_deploy_freeze?
-    Date.today >= Date.parse("2016-12-22") && Date.today <= Date.parse("2017-01-04")
-  end
-
-  def weekday?
-    Date.today.saturday? || Date.today.sunday?
   end
 end
