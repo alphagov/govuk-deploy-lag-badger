@@ -12,7 +12,7 @@ def weekend?
 end
 
 task :run do
-  applications = YAML.load(HTTP.get('https://raw.githubusercontent.com/alphagov/govuk-developers/master/data/applications.yml'))
+  applications = YAML.load(HTTP.get('https://raw.githubusercontent.com/alphagov/govuk-developer-docs/master/data/applications.yml'))
   messages = applications.map { |application|
     MessageGenerator.new("alphagov/" + application.fetch('github_repo_name')).message
   }.compact
