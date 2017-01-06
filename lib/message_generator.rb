@@ -9,7 +9,12 @@ class MessageGenerator
   end
 
   def message
-    compare = GitHub.client.compare(repo_name, "deployed-to-production", "master")
+    begin
+      compare = GitHub.client.compare(repo_name, "deployed-to-production", "master")
+    rescue Octokit::NotFound
+      # Bail out if one of the branches / repos doesn't exust
+      return
+    end
 
     committer_names = compare[:commits].map { |commit|
       commit.to_h.dig(:commit, :author, :name)
