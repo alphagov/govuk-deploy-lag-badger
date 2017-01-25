@@ -28,7 +28,7 @@ class MessageGenerator
 
     merge_date_of_oldest_pull_request = unpdeployed_pull_requests.first[:commit][:committer][:date]
 
-    return unless merge_date_of_oldest_pull_request < (Time.now - 14.days)
+    return unless merge_date_of_oldest_pull_request < (Time.now - 31.days)
 
     seconds_ago = ((Time.now - merge_date_of_oldest_pull_request).abs).round
     days_ago = seconds_ago / 1.day
