@@ -1,5 +1,11 @@
+require 'rspec/core/rake_task'
+
+RSpec::Core::RakeTask.new(:spec)
+
+task default: :spec
+
 require 'http'
-require 'yaml'
+require 'json'
 
 require_relative './lib/message_generator'
 
@@ -12,10 +18,10 @@ def weekend?
 end
 
 task :run do
-  applications = YAML.load(HTTP.get('https://raw.githubusercontent.com/alphagov/govuk-developer-docs/master/data/applications.yml'))
+  applications = JSON.parse(HTTP.get('https://docs.publishing.service.gov.uk/apps.json'))
   messages = applications.map { |application|
-    next if application["retired"]
-    MessageGenerator.new("alphagov/" + application.fetch('github_repo_name')).message
+    github_owner_and_repo = application.dig('links', 'repo_url').gsub('https://github.com/', '')
+    MessageGenerator.new(github_owner_and_repo).message
   }.compact
 
   if messages.any?
@@ -46,6 +52,6 @@ task :run do
       next
     end
 
-    HTTP.post(ENV["BADGER_SLACK_WEBHOOK_URL"], body: JSON.dump(message_payload))
+    HTTP.post(ENV.fetch("BADGER_SLACK_WEBHOOK_URL"), body: JSON.dump(message_payload))
   end
 end
