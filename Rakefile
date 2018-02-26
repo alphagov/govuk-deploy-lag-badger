@@ -25,7 +25,7 @@ task :run do
   }.compact
 
   if messages.any?
-    message = "Hello :paw_prints:, this is your regular badgering to deploy!\n\n#{messages.join("\n")}"
+    message = "Hello :paw_prints:, this is your <https://github.com/alphagov/govuk-deploy-lag-badger|regular badgering to deploy>!\n\n#{messages.join("\n")}"
 
     message_payload = {
       username: "Badger",
