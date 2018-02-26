@@ -17,6 +17,7 @@ def weekend?
   Date.today.saturday? || Date.today.sunday?
 end
 
+desc "Run the deploy lag badger"
 task :run do
   applications = JSON.parse(HTTP.get('https://docs.publishing.service.gov.uk/apps.json'))
   messages = applications.map { |application|
@@ -25,14 +26,14 @@ task :run do
   }.compact
 
   if messages.any?
-    message = "Hello :paw_prints:, this is your regular badgering to deploy!\n\n#{messages.join("\n")}"
+    message = "Hello :paw_prints:, this is your <https://github.com/alphagov/govuk-deploy-lag-badger|regular badgering to deploy>!\n\n#{messages.join("\n")}"
 
     message_payload = {
       username: "Badger",
       icon_emoji: ":badger:",
       text: message,
       mrkdwn: true,
-      channel: '#govuk-deploy',
+      channel: '#govuk-developers',
     }
 
     puts message
