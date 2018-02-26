@@ -32,7 +32,7 @@ task :run do
       icon_emoji: ":badger:",
       text: message,
       mrkdwn: true,
-      channel: '#govuk-deploy',
+      channel: '#govuk-developers',
     }
 
     puts message
