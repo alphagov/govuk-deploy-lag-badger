@@ -17,6 +17,7 @@ def weekend?
   Date.today.saturday? || Date.today.sunday?
 end
 
+desc "Run the deploy lag badger"
 task :run do
   applications = JSON.parse(HTTP.get('https://docs.publishing.service.gov.uk/apps.json'))
   messages = applications.map { |application|
