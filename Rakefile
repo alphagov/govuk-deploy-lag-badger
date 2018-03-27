@@ -17,6 +17,32 @@ def weekend?
   Date.today.saturday? || Date.today.sunday?
 end
 
+def random_parrot
+  %w[
+    angel_parrot
+    aussieparrot
+    ceiling_parrot
+    coffeeparrot
+    congaparrot
+    darkbeerparrot
+    discoparrot
+    fasterparrot
+    fiesta_parrot
+    gentleman_parrot
+    ice_cream_parrot
+    jediparrot
+    jenkins_parrot
+    loveparrot
+    mardi_gras_parrot
+    oldtimeyparrot
+    parrot
+    ship_it_parrot
+    skiparrot
+    shuffleparrot
+    ultrafastparrot
+  ].sample
+end
+
 desc "Run the deploy lag badger"
 task :run do
   applications = JSON.parse(HTTP.get('https://docs.publishing.service.gov.uk/apps.json'))
@@ -27,32 +53,34 @@ task :run do
 
   if messages.any?
     message = "Hello :paw_prints:, this is your <https://github.com/alphagov/govuk-deploy-lag-badger|regular badgering to deploy>!\n\n#{messages.join("\n")}"
-
-    message_payload = {
-      username: "Badger",
-      icon_emoji: ":badger:",
-      text: message,
-      mrkdwn: true,
-      channel: '#govuk-developers',
-    }
-
-    puts message
-
-    if weekend?
-      puts "Not posting anything, it's the weekend"
-      next
-    end
-
-    if currently_in_deploy_freeze?
-      puts "Not posting anything, we're in a deploy freeze period"
-      next
-    end
-
-    if ENV['REALLY_POST_TO_SLACK'] != "1"
-      puts "Not posting anything, this is a dry run"
-      next
-    end
-
-    HTTP.post(ENV.fetch("BADGER_SLACK_WEBHOOK_URL"), body: JSON.dump(message_payload))
+  else
+    message = "Hello :paw_prints:, there aren't any undeployed pull requests older than 7 days. GOOD JOB TEAM! :#{random_parrot}:"
   end
+
+  message_payload = {
+    username: "Badger",
+    icon_emoji: ":badger:",
+    text: message,
+    mrkdwn: true,
+    channel: '#govuk-developers',
+  }
+
+  puts message
+
+  if weekend?
+    puts "Not posting anything, it's the weekend"
+    next
+  end
+
+  if currently_in_deploy_freeze?
+    puts "Not posting anything, we're in a deploy freeze period"
+    next
+  end
+
+  if ENV['REALLY_POST_TO_SLACK'] != "1"
+    puts "Not posting anything, this is a dry run"
+    next
+  end
+
+  HTTP.post(ENV.fetch("BADGER_SLACK_WEBHOOK_URL"), body: JSON.dump(message_payload))
 end
