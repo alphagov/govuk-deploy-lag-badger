@@ -20,7 +20,7 @@ RSpec.describe MessageGenerator do
       message = MessageGenerator.new("alphagov/multipage-frontend").message
 
       expect(message).to eql(
-        "- <https://github.com/alphagov/multipage-frontend|multipage-frontend> has " \
+        "- <https://release.publishing.service.gov.uk/applications/multipage-frontend|multipage-frontend> has " \
         "<https://github.com/alphagov/multipage-frontend/compare/deployed-to-production...master|3 " \
         "undeployed pull requests>, the oldest of which was merged 17 days " \
         "ago. It includes commits by Daniel Roseman, Tijmen Brommet, Steve " \
@@ -34,10 +34,23 @@ RSpec.describe MessageGenerator do
       message = MessageGenerator.new("alphagov/business-support-api").message
 
       expect(message).to eql(
-        "- <https://github.com/alphagov/business-support-api|business-support-api> " \
+        "- <https://release.publishing.service.gov.uk/applications/business-support-api|business-support-api> " \
         "has <https://github.com/alphagov/business-support-api/compare/deployed-to-production...master|1 " \
         "undeployed pull request> which was merged 42 days ago. It includes " \
         "commits by Murray Steele and Simon."
+      )
+    end
+  end
+
+  it "corrects the slug for inconsistently named applications" do
+    VCR.use_cassette("contacts-admin") do
+      message = MessageGenerator.new("alphagov/contacts-admin").message
+
+      expect(message).to eql(
+        "- <https://release.publishing.service.gov.uk/applications/contacts|contacts-admin> " \
+        "has <https://github.com/alphagov/contacts-admin/compare/deployed-to-production...master|1 " \
+        "undeployed pull request> which was merged 8 days ago. It includes " \
+        "commits by dependabot[bot] and Simon."
       )
     end
   end
