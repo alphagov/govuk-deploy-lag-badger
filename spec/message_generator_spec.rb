@@ -24,7 +24,7 @@ RSpec.describe MessageGenerator do
         "<https://github.com/alphagov/multipage-frontend/compare/deployed-to-production...master|3 " \
         "undeployed pull requests>, the oldest of which was merged 17 days " \
         "ago. It includes commits by Daniel Roseman, Tijmen Brommet, Steve " \
-        "Laing, and Carlos Vilhena."
+        "Laing, and Carlos Vilhena.",
       )
     end
   end
@@ -37,7 +37,7 @@ RSpec.describe MessageGenerator do
         "- <https://release.publishing.service.gov.uk/applications/business-support-api|business-support-api> " \
         "has <https://github.com/alphagov/business-support-api/compare/deployed-to-production...master|1 " \
         "undeployed pull request> which was merged 42 days ago. It includes " \
-        "commits by Murray Steele and Simon."
+        "commits by Murray Steele and Simon.",
       )
     end
   end
@@ -50,7 +50,7 @@ RSpec.describe MessageGenerator do
         "- <https://release.publishing.service.gov.uk/applications/contacts|contacts-admin> " \
         "has <https://github.com/alphagov/contacts-admin/compare/deployed-to-production...master|1 " \
         "undeployed pull request> which was merged 8 days ago. It includes " \
-        "commits by dependabot[bot] and Simon."
+        "commits by dependabot[bot] and Simon.",
       )
     end
   end

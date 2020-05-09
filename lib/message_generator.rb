@@ -1,7 +1,7 @@
-require 'active_support'
-require 'active_support/core_ext'
+require "active_support"
+require "active_support/core_ext"
 
-require_relative 'github'
+require_relative "github"
 
 class MessageGenerator
   APP_SLUG_OVERRIDES = {
@@ -39,7 +39,7 @@ class MessageGenerator
 
     return unless merge_date_of_oldest_pull_request < (Time.now - 7.days)
 
-    seconds_ago = ((Time.now - merge_date_of_oldest_pull_request).abs).round
+    seconds_ago = (Time.now - merge_date_of_oldest_pull_request).abs.round
     days_ago = seconds_ago / 1.day
 
     if undeployed_pull_requests.size == 1
@@ -52,7 +52,7 @@ class MessageGenerator
 private
 
   def app_name
-    repo_name.gsub('alphagov/', '')
+    repo_name.gsub("alphagov/", "")
   end
 
   def app_slug
