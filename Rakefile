@@ -2,7 +2,12 @@ require 'rspec/core/rake_task'
 
 RSpec::Core::RakeTask.new(:spec)
 
-task default: :spec
+desc 'Lint ruby'
+task :lint do
+  sh "bundle exec rubocop --format clang"
+end
+
+task default: %i[lint spec]
 
 require 'http'
 require 'json'
