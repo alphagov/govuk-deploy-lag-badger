@@ -1,4 +1,4 @@
-require 'octokit'
+require "octokit"
 
 class GitHub
   def self.client

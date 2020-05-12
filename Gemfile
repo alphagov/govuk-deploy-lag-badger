@@ -1,12 +1,13 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
-ruby File.read('.ruby-version').strip
+ruby File.read(".ruby-version").strip
 
-gem 'rake'
-gem 'octokit'
-gem 'activesupport'
-gem 'http'
-gem 'rspec'
-gem 'vcr'
-gem 'webmock'
-gem 'timecop'
+gem "activesupport"
+gem "http"
+gem "octokit"
+gem "rake"
+gem "rspec"
+gem "rubocop-govuk"
+gem "timecop"
+gem "vcr"
+gem "webmock"

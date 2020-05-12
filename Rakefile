@@ -1,13 +1,18 @@
-require 'rspec/core/rake_task'
+require "rspec/core/rake_task"
 
 RSpec::Core::RakeTask.new(:spec)
 
-task default: :spec
+desc "Lint ruby"
+task :lint do
+  sh "bundle exec rubocop --format clang"
+end
 
-require 'http'
-require 'json'
+task default: %i[lint spec]
 
-require_relative './lib/message_generator'
+require "http"
+require "json"
+
+require_relative "./lib/message_generator"
 
 def currently_in_deploy_freeze?
   Date.today >= Date.parse("2016-12-22") && Date.today <= Date.parse("2017-01-04")
@@ -45,24 +50,24 @@ end
 
 desc "Run the deploy lag badger"
 task :run do
-  applications = JSON.parse(HTTP.get('https://docs.publishing.service.gov.uk/apps.json'))
+  applications = JSON.parse(HTTP.get("https://docs.publishing.service.gov.uk/apps.json"))
   messages = applications.map { |application|
-    github_owner_and_repo = application.dig('links', 'repo_url').gsub('https://github.com/', '')
+    github_owner_and_repo = application.dig("links", "repo_url").gsub("https://github.com/", "")
     MessageGenerator.new(github_owner_and_repo).message
   }.compact
 
-  if messages.any?
-    message = "Hello :paw_prints:, this is your <https://github.com/alphagov/govuk-deploy-lag-badger|regular badgering to deploy>!\n\n#{messages.join("\n")}"
-  else
-    message = "Hello :paw_prints:, there aren't any undeployed pull requests older than 7 days. GOOD JOB TEAM! :#{random_parrot}:"
-  end
+  message = if messages.any?
+              "Hello :paw_prints:, this is your <https://github.com/alphagov/govuk-deploy-lag-badger|regular badgering to deploy>!\n\n#{messages.join("\n")}"
+            else
+              "Hello :paw_prints:, there aren't any undeployed pull requests older than 7 days. GOOD JOB TEAM! :#{random_parrot}:"
+            end
 
   message_payload = {
     username: "Badger",
     icon_emoji: ":badger:",
     text: message,
     mrkdwn: true,
-    channel: '#govuk-developers',
+    channel: "#govuk-developers",
   }
 
   puts message
@@ -77,7 +82,7 @@ task :run do
     next
   end
 
-  if ENV['REALLY_POST_TO_SLACK'] != "1"
+  if ENV["REALLY_POST_TO_SLACK"] != "1"
     puts "Not posting anything, this is a dry run"
     next
   end
