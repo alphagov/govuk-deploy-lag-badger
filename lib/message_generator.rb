@@ -18,34 +18,18 @@ class MessageGenerator
   end
 
   def message
-    begin
-      compare = GitHub.client.compare(repo_name, "deployed-to-production", "master")
-    rescue Octokit::NotFound
-      # Bail out if one of the branches / repos doesn't exust
-      return
-    end
+    committer_names = rand(1..5).times.map { "<redacted>" }.to_sentence
+    undeployed_pull_requests = rand(0...10).times.map { "" }
+    undeployed_pull_requests = [] unless rand(0...4) == 0
+    days_ago = rand(1..10)
 
-    committer_names = compare[:commits].map { |commit|
-      commit.to_h.dig(:commit, :author, :name)
-    }.uniq.to_sentence
-
-    undeployed_pull_requests = compare[:commits].select { |commit|
-      commit[:commit][:message].start_with?("Merge pull request")
-    }.compact
-
-    return unless undeployed_pull_requests.first
-
-    merge_date_of_oldest_pull_request = undeployed_pull_requests.first[:commit][:committer][:date]
-
-    return unless merge_date_of_oldest_pull_request < (Time.now - 7.days)
-
-    seconds_ago = (Time.now - merge_date_of_oldest_pull_request).abs.round
-    days_ago = seconds_ago / 1.day
+    return if repo_name =~ /govuk/
+    return unless undeployed_pull_requests.any?
 
     if undeployed_pull_requests.size == 1
-      "- <#{RELEASE_APP_PATH}#{app_slug}|#{app_name}> has <#{compare[:html_url]}|1 undeployed pull request> which was merged #{days_ago} days ago. It includes commits by #{committer_names}."
+      "- <#{RELEASE_APP_PATH}#{app_slug}|#{app_name}> has <http://google.com|1 undeployed pull request> which was merged #{days_ago} days ago. It includes commits by #{committer_names}."
     else
-      "- <#{RELEASE_APP_PATH}#{app_slug}|#{app_name}> has <#{compare[:html_url]}|#{undeployed_pull_requests.size} undeployed pull requests>, the oldest of which was merged #{days_ago} days ago. It includes commits by #{committer_names}."
+      "- <#{RELEASE_APP_PATH}#{app_slug}|#{app_name}> has <http://google.com|#{undeployed_pull_requests.size} undeployed pull requests>, the oldest of which was merged #{days_ago} days ago. It includes commits by #{committer_names}."
     end
   end
 

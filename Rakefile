@@ -67,7 +67,7 @@ task :run do
     icon_emoji: ":badger:",
     text: message,
     mrkdwn: true,
-    channel: "#govuk-developers",
+    channel: "#ben-test-temporary",
   }
 
   puts message
