@@ -75,6 +75,150 @@ http_interactions:
         Vilhena","email":"carlosvilhena@gmail.com","date":"2016-12-02T15:36:10Z"},"committer":{"name":"GitHub","email":"noreply@github.com","date":"2016-12-02T15:36:10Z"},"message":"Merge
         pull request #724 from alphagov/raise-for-super-high-page-count\n\nDon''t
         allow extremely high value for `page`","tree":{"sha":"797c3e2a9339cad3d0faa2c50989b60255075c11","url":"https://api.github.com/repos/alphagov/rummager/git/trees/797c3e2a9339cad3d0faa2c50989b60255075c11"},"url":"https://api.github.com/repos/alphagov/rummager/git/commits/34ce272a02b979bd6d47ffa7405eae1074e86e30","comment_count":0},"url":"https://api.github.com/repos/alphagov/rummager/commits/34ce272a02b979bd6d47ffa7405eae1074e86e30","html_url":"https://github.com/alphagov/rummager/commit/34ce272a02b979bd6d47ffa7405eae1074e86e30","comments_url":"https://api.github.com/repos/alphagov/rummager/commits/34ce272a02b979bd6d47ffa7405eae1074e86e30/comments","author":{"login":"carvil","id":416701,"avatar_url":"https://avatars.githubusercontent.com/u/416701?v=3","gravatar_id":"","url":"https://api.github.com/users/carvil","html_url":"https://github.com/carvil","followers_url":"https://api.github.com/users/carvil/followers","following_url":"https://api.github.com/users/carvil/following{/other_user}","gists_url":"https://api.github.com/users/carvil/gists{/gist_id}","starred_url":"https://api.github.com/users/carvil/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/carvil/subscriptions","organizations_url":"https://api.github.com/users/carvil/orgs","repos_url":"https://api.github.com/users/carvil/repos","events_url":"https://api.github.com/users/carvil/events{/privacy}","received_events_url":"https://api.github.com/users/carvil/received_events","type":"User","site_admin":false},"committer":{"login":"web-flow","id":19864447,"avatar_url":"https://avatars.githubusercontent.com/u/19864447?v=3","gravatar_id":"","url":"https://api.github.com/users/web-flow","html_url":"https://github.com/web-flow","followers_url":"https://api.github.com/users/web-flow/followers","following_url":"https://api.github.com/users/web-flow/following{/other_user}","gists_url":"https://api.github.com/users/web-flow/gists{/gist_id}","starred_url":"https://api.github.com/users/web-flow/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/web-flow/subscriptions","organizations_url":"https://api.github.com/users/web-flow/orgs","repos_url":"https://api.github.com/users/web-flow/repos","events_url":"https://api.github.com/users/web-flow/events{/privacy}","received_events_url":"https://api.github.com/users/web-flow/received_events","type":"User","site_admin":false},"parents":[{"sha":"b873f2b567818d4ef82cef4b33d1b6f973f459da","url":"https://api.github.com/repos/alphagov/rummager/commits/b873f2b567818d4ef82cef4b33d1b6f973f459da","html_url":"https://github.com/alphagov/rummager/commit/b873f2b567818d4ef82cef4b33d1b6f973f459da"},{"sha":"a037587bf1fecb089746a16efbe02776e5f9d08d","url":"https://api.github.com/repos/alphagov/rummager/commits/a037587bf1fecb089746a16efbe02776e5f9d08d","html_url":"https://github.com/alphagov/rummager/commit/a037587bf1fecb089746a16efbe02776e5f9d08d"}]},"status":"identical","ahead_by":0,"behind_by":0,"total_commits":0,"commits":[],"files":[]}'
-    http_version: 
+    http_version:
   recorded_at: Tue, 06 Dec 2016 08:41:15 GMT
-recorded_with: VCR 2.9.3
+- request:
+    method: get
+    uri: https://api.github.com/repos/alphagov/rummager/branches
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json
+      User-Agent:
+      - Octokit Ruby Gem 4.13.0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 10 Feb 2022 15:11:26 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '157'
+      Location:
+      - https://api.github.com/repositories/2686767/branches
+      X-Github-Media-Type:
+      - github.v3; format=json
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO,
+        X-GitHub-Request-Id, Deprecation, Sunset
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Frame-Options:
+      - deny
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - '0'
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Content-Security-Policy:
+      - default-src 'none'
+      Vary:
+      - Accept-Encoding, Accept, X-Requested-With
+      X-Ratelimit-Limit:
+      - '60'
+      X-Ratelimit-Remaining:
+      - '41'
+      X-Ratelimit-Reset:
+      - '1644506139'
+      X-Ratelimit-Resource:
+      - core
+      X-Ratelimit-Used:
+      - '19'
+      X-Github-Request-Id:
+      - EFC3:A637:EFCC6:FB8FD:62052B1E
+    body:
+      encoding: UTF-8
+      string: '{"message":"Moved Permanently","url":"https://api.github.com/repositories/2686767/branches","documentation_url":"https://docs.github.com/v3/#http-redirects"}'
+    http_version:
+  recorded_at: Tue, 06 Dec 2016 12:00:00 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repositories/2686767/branches
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json
+      User-Agent:
+      - Octokit Ruby Gem 4.13.0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 10 Feb 2022 15:11:26 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - public, max-age=60, s-maxage=60
+      Vary:
+      - Accept, Accept-Encoding, Accept, X-Requested-With
+      Etag:
+      - W/"b6b351b3711219679b8d140f867233b344ecd3a48318701cc055fd6cac9ff677"
+      X-Github-Media-Type:
+      - github.v3; format=json
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO,
+        X-GitHub-Request-Id, Deprecation, Sunset
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Frame-Options:
+      - deny
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - '0'
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Content-Security-Policy:
+      - default-src 'none'
+      X-Ratelimit-Limit:
+      - '60'
+      X-Ratelimit-Remaining:
+      - '40'
+      X-Ratelimit-Reset:
+      - '1644506138'
+      X-Ratelimit-Resource:
+      - core
+      X-Ratelimit-Used:
+      - '20'
+      Accept-Ranges:
+      - bytes
+      Content-Length:
+      - '576'
+      X-Github-Request-Id:
+      - EFC4:11008:305362:3160A5:62052B1E
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"name":"deployed-to-integration","commit":{"sha":"edcb1143caf03fa5db55ad4cc92d2515cf41c2dd","url":"https://api.github.com/repos/alphagov/search-api/commits/edcb1143caf03fa5db55ad4cc92d2515cf41c2dd"},"protected":false},{"name":"deployed-to-production","commit":{"sha":"498ba645d9d7f1db6e78ca6b24bc0dd9c398cc9a","url":"https://api.github.com/repos/alphagov/search-api/commits/498ba645d9d7f1db6e78ca6b24bc0dd9c398cc9a"},"protected":false},{"name":"deployed-to-staging","commit":{"sha":"498ba645d9d7f1db6e78ca6b24bc0dd9c398cc9a","url":"https://api.github.com/repos/alphagov/search-api/commits/498ba645d9d7f1db6e78ca6b24bc0dd9c398cc9a"},"protected":false},{"name":"doxument-types","commit":{"sha":"3b620d2f26f6806f9f652abd8f8a8d9cac88dafb","url":"https://api.github.com/repos/alphagov/search-api/commits/3b620d2f26f6806f9f652abd8f8a8d9cac88dafb"},"protected":false},{"name":"ensure-asg-scale-down","commit":{"sha":"0041f4e8c57b03920681c1ce9129626d943bc6d9","url":"https://api.github.com/repos/alphagov/search-api/commits/0041f4e8c57b03920681c1ce9129626d943bc6d9"},"protected":false},{"name":"fix-ranking-deploy","commit":{"sha":"bcc8bb3ccd654852923ffa7565ec5ea89b5351da","url":"https://api.github.com/repos/alphagov/search-api/commits/bcc8bb3ccd654852923ffa7565ec5ea89b5351da"},"protected":false},{"name":"main","commit":{"sha":"498ba645d9d7f1db6e78ca6b24bc0dd9c398cc9a","url":"https://api.github.com/repos/alphagov/search-api/commits/498ba645d9d7f1db6e78ca6b24bc0dd9c398cc9a"},"protected":true},{"name":"migrate-concourse-to-jenkins","commit":{"sha":"96313e8c8052529121fbcc0e7547a4a8bd5a007f","url":"https://api.github.com/repos/alphagov/search-api/commits/96313e8c8052529121fbcc0e7547a4a8bd5a007f"},"protected":false},{"name":"new-specialist-finder-for-CMA","commit":{"sha":"edcb1143caf03fa5db55ad4cc92d2515cf41c2dd","url":"https://api.github.com/repos/alphagov/search-api/commits/edcb1143caf03fa5db55ad4cc92d2515cf41c2dd"},"protected":false},{"name":"reindex-test","commit":{"sha":"aa47f174d5e4676ffa5da0e0816e70fb49c87423","url":"https://api.github.com/repos/alphagov/search-api/commits/aa47f174d5e4676ffa5da0e0816e70fb49c87423"},"protected":false},{"name":"release","commit":{"sha":"498ba645d9d7f1db6e78ca6b24bc0dd9c398cc9a","url":"https://api.github.com/repos/alphagov/search-api/commits/498ba645d9d7f1db6e78ca6b24bc0dd9c398cc9a"},"protected":false},{"name":"ruby-2-7-5","commit":{"sha":"88a00f73f0237f90d8b26d3eba78898b3a1724a3","url":"https://api.github.com/repos/alphagov/search-api/commits/88a00f73f0237f90d8b26d3eba78898b3a1724a3"},"protected":false}]'
+    http_version:
+  recorded_at: Tue, 06 Dec 2016 12:00:00 GMT
+recorded_with: VCR 4.0.0
