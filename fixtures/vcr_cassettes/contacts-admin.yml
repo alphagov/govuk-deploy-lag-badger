@@ -116,4 +116,78 @@ http_interactions:
         0.10.4)\n     public_suffix (3.0.3)\n     rack (2.0.6)"}]}'
     http_version:
   recorded_at: Tue, 06 Dec 2016 12:00:00 GMT
-recorded_with: VCR 2.9.3
+- request:
+    method: get
+    uri: https://api.github.com/repos/alphagov/contacts-admin/branches
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json
+      User-Agent:
+      - Octokit Ruby Gem 4.13.0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 10 Feb 2022 15:11:25 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - public, max-age=60, s-maxage=60
+      Vary:
+      - Accept, Accept-Encoding, Accept, X-Requested-With
+      Etag:
+      - W/"12dc12eb9724c9cfec5ad5850959b9d9167e9174ba161ea537de24138e2b3cab"
+      X-Github-Media-Type:
+      - github.v3; format=json
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO,
+        X-GitHub-Request-Id, Deprecation, Sunset
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Frame-Options:
+      - deny
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - '0'
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Content-Security-Policy:
+      - default-src 'none'
+      X-Ratelimit-Limit:
+      - '60'
+      X-Ratelimit-Remaining:
+      - '42'
+      X-Ratelimit-Reset:
+      - '1644506138'
+      X-Ratelimit-Resource:
+      - core
+      X-Ratelimit-Used:
+      - '18'
+      Accept-Ranges:
+      - bytes
+      Content-Length:
+      - '684'
+      X-Github-Request-Id:
+      - EFC2:2619:1B6E46:1C4678:62052B1D
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"name":"dependabot/bundler/govuk_app_config-4.3.0","commit":{"sha":"4c28bc18673a07584126d835cc59489be7afdd2f","url":"https://api.github.com/repos/alphagov/contacts-admin/commits/4c28bc18673a07584126d835cc59489be7afdd2f"},"protected":false},{"name":"dependabot/bundler/rspec-rails-5.1.0","commit":{"sha":"4cdb551bd13a6b4c91b8e8d3714eee5e4da587d4","url":"https://api.github.com/repos/alphagov/contacts-admin/commits/4cdb551bd13a6b4c91b8e8d3714eee5e4da587d4"},"protected":false},{"name":"deployed-to-integration","commit":{"sha":"a59b4042f74081f12e384f7ca4391a8c371725d6","url":"https://api.github.com/repos/alphagov/contacts-admin/commits/a59b4042f74081f12e384f7ca4391a8c371725d6"},"protected":false},{"name":"deployed-to-production","commit":{"sha":"3d190f9541e04a56d7c819da9334820237ea7ac9","url":"https://api.github.com/repos/alphagov/contacts-admin/commits/3d190f9541e04a56d7c819da9334820237ea7ac9"},"protected":false},{"name":"deployed-to-staging","commit":{"sha":"3d190f9541e04a56d7c819da9334820237ea7ac9","url":"https://api.github.com/repos/alphagov/contacts-admin/commits/3d190f9541e04a56d7c819da9334820237ea7ac9"},"protected":false},{"name":"deployed-to-training","commit":{"sha":"a7332660a67ddd7965b2ba8517bca9a01b3cf45c","url":"https://api.github.com/repos/alphagov/contacts-admin/commits/a7332660a67ddd7965b2ba8517bca9a01b3cf45c"},"protected":false},{"name":"fix-e2e-tests","commit":{"sha":"6e8f2553bb0243f9bb13874dfa96b9ad09f3cd57","url":"https://api.github.com/repos/alphagov/contacts-admin/commits/6e8f2553bb0243f9bb13874dfa96b9ad09f3cd57"},"protected":false},{"name":"fix-publishing-e2e-tests-for-contacts-admin","commit":{"sha":"f76b7f6650a036947e32c30eacbc7f928201b8f4","url":"https://api.github.com/repos/alphagov/contacts-admin/commits/f76b7f6650a036947e32c30eacbc7f928201b8f4"},"protected":false},{"name":"main","commit":{"sha":"a59b4042f74081f12e384f7ca4391a8c371725d6","url":"https://api.github.com/repos/alphagov/contacts-admin/commits/a59b4042f74081f12e384f7ca4391a8c371725d6"},"protected":true},{"name":"org-api","commit":{"sha":"c625bdd33d4d4fab9d4f43090e012b2d77a18127","url":"https://api.github.com/repos/alphagov/contacts-admin/commits/c625bdd33d4d4fab9d4f43090e012b2d77a18127"},"protected":false},{"name":"release","commit":{"sha":"a59b4042f74081f12e384f7ca4391a8c371725d6","url":"https://api.github.com/repos/alphagov/contacts-admin/commits/a59b4042f74081f12e384f7ca4391a8c371725d6"},"protected":false},{"name":"ruby-2-7-1","commit":{"sha":"afe5b9b450df41408c870574c022ced24c472c96","url":"https://api.github.com/repos/alphagov/contacts-admin/commits/afe5b9b450df41408c870574c022ced24c472c96"},"protected":false},{"name":"test","commit":{"sha":"1c9aff62f45a931df442843bb96feb2c5f0fdde3","url":"https://api.github.com/repos/alphagov/contacts-admin/commits/1c9aff62f45a931df442843bb96feb2c5f0fdde3"},"protected":false},{"name":"update-govuk-content-schema-test-helpers","commit":{"sha":"f3973aa65a46b377443695e0f710bf9b76316aa6","url":"https://api.github.com/repos/alphagov/contacts-admin/commits/f3973aa65a46b377443695e0f710bf9b76316aa6"},"protected":false}]'
+    http_version:
+  recorded_at: Tue, 06 Dec 2016 12:00:00 GMT
+recorded_with: VCR 4.0.0

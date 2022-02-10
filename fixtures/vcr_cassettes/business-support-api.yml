@@ -102,6 +102,80 @@ http_interactions:
         facets)\n+\n+      visit \"/business-support-schemes.json?postcode=WC2B%206SE\"\n+\n+      parsed_response
         = JSON.parse(page.body)\n+      expect(parsed_response[\"total\"]).to eq(0)\n+    end\n   end\n
         end"}]}'
-    http_version: 
+    http_version:
   recorded_at: Tue, 06 Dec 2016 12:00:00 GMT
-recorded_with: VCR 2.9.3
+- request:
+    method: get
+    uri: https://api.github.com/repos/alphagov/business-support-api/branches
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json
+      User-Agent:
+      - Octokit Ruby Gem 4.13.0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 10 Feb 2022 15:11:25 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - public, max-age=60, s-maxage=60
+      Vary:
+      - Accept, Accept-Encoding, Accept, X-Requested-With
+      Etag:
+      - W/"aa8a915969cfb52ae227696af39c01a59bf1fff5be249b9f9ba37189fdca21e7"
+      X-Github-Media-Type:
+      - github.v3; format=json
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO,
+        X-GitHub-Request-Id, Deprecation, Sunset
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Frame-Options:
+      - deny
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - '0'
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Content-Security-Policy:
+      - default-src 'none'
+      X-Ratelimit-Limit:
+      - '60'
+      X-Ratelimit-Remaining:
+      - '43'
+      X-Ratelimit-Reset:
+      - '1644506138'
+      X-Ratelimit-Resource:
+      - core
+      X-Ratelimit-Used:
+      - '17'
+      Accept-Ranges:
+      - bytes
+      Content-Length:
+      - '522'
+      X-Github-Request-Id:
+      - EFC1:D485:2471DF:255D85:62052B1D
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"name":"add_areas_lookup","commit":{"sha":"5bc2d58d157882cb8998af6139fbcbd8975e4e99","url":"https://api.github.com/repos/alphagov/business-support-api/commits/5bc2d58d157882cb8998af6139fbcbd8975e4e99"},"protected":false},{"name":"bump_ruby_version","commit":{"sha":"2f6cdf6d484711b8c3293a2bd5b6bdf0c2045702","url":"https://api.github.com/repos/alphagov/business-support-api/commits/2f6cdf6d484711b8c3293a2bd5b6bdf0c2045702"},"protected":false},{"name":"define_endpoint_routes","commit":{"sha":"09b445350a93f62601c673ac696a827ef18da7fd","url":"https://api.github.com/repos/alphagov/business-support-api/commits/09b445350a93f62601c673ac696a827ef18da7fd"},"protected":false},{"name":"deployed-to-integration","commit":{"sha":"e89a75c0febe5a55b398c2fd757838056d121253","url":"https://api.github.com/repos/alphagov/business-support-api/commits/e89a75c0febe5a55b398c2fd757838056d121253"},"protected":false},{"name":"deployed-to-preview","commit":{"sha":"135f2cfd3c7b92cc9225c8947afd823b69ab2edd","url":"https://api.github.com/repos/alphagov/business-support-api/commits/135f2cfd3c7b92cc9225c8947afd823b69ab2edd"},"protected":false},{"name":"deployed-to-production","commit":{"sha":"e89a75c0febe5a55b398c2fd757838056d121253","url":"https://api.github.com/repos/alphagov/business-support-api/commits/e89a75c0febe5a55b398c2fd757838056d121253"},"protected":false},{"name":"deployed-to-staging","commit":{"sha":"e89a75c0febe5a55b398c2fd757838056d121253","url":"https://api.github.com/repos/alphagov/business-support-api/commits/e89a75c0febe5a55b398c2fd757838056d121253"},"protected":false},{"name":"master","commit":{"sha":"e89a75c0febe5a55b398c2fd757838056d121253","url":"https://api.github.com/repos/alphagov/business-support-api/commits/e89a75c0febe5a55b398c2fd757838056d121253"},"protected":true},{"name":"release","commit":{"sha":"e89a75c0febe5a55b398c2fd757838056d121253","url":"https://api.github.com/repos/alphagov/business-support-api/commits/e89a75c0febe5a55b398c2fd757838056d121253"},"protected":false},{"name":"remove-business-support-locations","commit":{"sha":"229a9cdde13cdc62134f06ef4a9e2d3f1f4a0d17","url":"https://api.github.com/repos/alphagov/business-support-api/commits/229a9cdde13cdc62134f06ef4a9e2d3f1f4a0d17"},"protected":false},{"name":"retrieve_schemes_from_content_api_only","commit":{"sha":"b6466e678f3fc06aeb6422a64dde9cf75950be47","url":"https://api.github.com/repos/alphagov/business-support-api/commits/b6466e678f3fc06aeb6422a64dde9cf75950be47"},"protected":false}]'
+    http_version:
+  recorded_at: Tue, 06 Dec 2016 12:00:00 GMT
+recorded_with: VCR 4.0.0

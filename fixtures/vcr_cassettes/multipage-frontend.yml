@@ -563,6 +563,80 @@ http_interactions:
         requests for\n # content from static (i.e. core_layout.html.erb).\n class
         ActionController::Base\n-  before_filter proc {\n+  before_action proc {\n     response.headers[Slimmer::Headers::SKIP_HEADER]
         = \"true\" unless ENV[\"USE_SLIMMER\"]\n   }\n end"}]}'
-    http_version: 
+    http_version:
   recorded_at: Tue, 06 Dec 2016 08:42:01 GMT
-recorded_with: VCR 2.9.3
+- request:
+    method: get
+    uri: https://api.github.com/repos/alphagov/multipage-frontend/branches
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json
+      User-Agent:
+      - Octokit Ruby Gem 4.13.0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 10 Feb 2022 15:11:25 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - public, max-age=60, s-maxage=60
+      Vary:
+      - Accept, Accept-Encoding, Accept, X-Requested-With
+      Etag:
+      - W/"da5e6fa4e3e36f487c9cf4f81ab66daeedb189551b029f14298b8a9b01febe2c"
+      X-Github-Media-Type:
+      - github.v3; format=json
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO,
+        X-GitHub-Request-Id, Deprecation, Sunset
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Frame-Options:
+      - deny
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - '0'
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Content-Security-Policy:
+      - default-src 'none'
+      X-Ratelimit-Limit:
+      - '60'
+      X-Ratelimit-Remaining:
+      - '44'
+      X-Ratelimit-Reset:
+      - '1644506139'
+      X-Ratelimit-Resource:
+      - core
+      X-Ratelimit-Used:
+      - '16'
+      Accept-Ranges:
+      - bytes
+      Content-Length:
+      - '592'
+      X-Github-Request-Id:
+      - EFC0:E6AB:1CC733:1DA2E5:62052B1C
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"name":"add_startup_script","commit":{"sha":"6eeb126865f356e2f261765711176076873e950d","url":"https://api.github.com/repos/alphagov/multipage-frontend/commits/6eeb126865f356e2f261765711176076873e950d"},"protected":false},{"name":"add-gc-reporting","commit":{"sha":"69af78afe5d3e954617f8b583c927fe33865ee63","url":"https://api.github.com/repos/alphagov/multipage-frontend/commits/69af78afe5d3e954617f8b583c927fe33865ee63"},"protected":false},{"name":"deployed-to-integration","commit":{"sha":"804ecffdcaabae96ca5d0ccdec7fdb74f7cc91d4","url":"https://api.github.com/repos/alphagov/multipage-frontend/commits/804ecffdcaabae96ca5d0ccdec7fdb74f7cc91d4"},"protected":false},{"name":"deployed-to-production","commit":{"sha":"d6ff2a91cce7f78275685c49608f90a2b53ef57e","url":"https://api.github.com/repos/alphagov/multipage-frontend/commits/d6ff2a91cce7f78275685c49608f90a2b53ef57e"},"protected":false},{"name":"deployed-to-staging","commit":{"sha":"d6ff2a91cce7f78275685c49608f90a2b53ef57e","url":"https://api.github.com/repos/alphagov/multipage-frontend/commits/d6ff2a91cce7f78275685c49608f90a2b53ef57e"},"protected":false},{"name":"fix_up_for_passthrough_hash","commit":{"sha":"0f384989acc6904edc60ac4bc8a557dcb5efa218","url":"https://api.github.com/repos/alphagov/multipage-frontend/commits/0f384989acc6904edc60ac4bc8a557dcb5efa218"},"protected":false},{"name":"master","commit":{"sha":"804ecffdcaabae96ca5d0ccdec7fdb74f7cc91d4","url":"https://api.github.com/repos/alphagov/multipage-frontend/commits/804ecffdcaabae96ca5d0ccdec7fdb74f7cc91d4"},"protected":false},{"name":"memory-profile","commit":{"sha":"d9833992839ad9a1eacf9d74367bdcdee5f48994","url":"https://api.github.com/repos/alphagov/multipage-frontend/commits/d9833992839ad9a1eacf9d74367bdcdee5f48994"},"protected":false},{"name":"monitor-memory-leak","commit":{"sha":"01b105703eef05ff03ca6333ae448a1132e9ff46","url":"https://api.github.com/repos/alphagov/multipage-frontend/commits/01b105703eef05ff03ca6333ae448a1132e9ff46"},"protected":false},{"name":"release","commit":{"sha":"804ecffdcaabae96ca5d0ccdec7fdb74f7cc91d4","url":"https://api.github.com/repos/alphagov/multipage-frontend/commits/804ecffdcaabae96ca5d0ccdec7fdb74f7cc91d4"},"protected":false},{"name":"restore-5-min-cache-time","commit":{"sha":"d3dba41cf2ba1da83f6561eb55a3c7a370109c14","url":"https://api.github.com/repos/alphagov/multipage-frontend/commits/d3dba41cf2ba1da83f6561eb55a3c7a370109c14"},"protected":false},{"name":"ruby-prof-memory-profile","commit":{"sha":"e251b1acf92b17e36d3f68c4e3f90194b9528f7d","url":"https://api.github.com/repos/alphagov/multipage-frontend/commits/e251b1acf92b17e36d3f68c4e3f90194b9528f7d"},"protected":false}]'
+    http_version:
+  recorded_at: Tue, 06 Dec 2016 12:00:00 GMT
+recorded_with: VCR 4.0.0
