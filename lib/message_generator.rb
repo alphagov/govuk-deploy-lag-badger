@@ -18,8 +18,8 @@ class MessageGenerator
   end
 
   def message
-    branch_name = GitHub.client.branches(repo_name).include?("main") ? "main" : "master"
     begin
+      branch_name = GitHub.client.branches(repo_name).map(&:name).include?("main") ? "main" : "master"
       compare = GitHub.client.compare(repo_name, "deployed-to-production", branch_name)
     rescue Octokit::NotFound
       # Bail out if one of the branches / repos doesn't exist

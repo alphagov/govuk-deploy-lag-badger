@@ -48,7 +48,7 @@ RSpec.describe MessageGenerator do
 
       expect(message).to eql(
         "- <https://release.publishing.service.gov.uk/applications/contacts|contacts-admin> " \
-        "has <https://github.com/alphagov/contacts-admin/compare/deployed-to-production...master|1 " \
+        "has <https://github.com/alphagov/contacts-admin/compare/deployed-to-production...main|1 " \
         "undeployed pull request> which was merged 8 days ago. It includes " \
         "commits by dependabot[bot] and Simon.",
       )
