@@ -5,7 +5,7 @@ with pull requests that have not been deployed after a week.
 
 ## Deployment
 
-A Jenkins job is set up to run every day. It uses master, so no deployment is
+A Jenkins job is set up to run every day. It uses main, so no deployment is
 necessary.
 
 ## Testing locally
