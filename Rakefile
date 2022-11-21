@@ -50,42 +50,45 @@ end
 
 desc "Run the deploy lag badger"
 task :run do
-  applications = JSON.parse(HTTP.get("https://docs.publishing.service.gov.uk/apps.json"))
-  messages = applications.map { |application|
-    github_owner_and_repo = application.dig("links", "repo_url").gsub("https://github.com/", "")
-    MessageGenerator.new(github_owner_and_repo).message
-  }.compact
+  JSON.parse(HTTP.get("https://docs.publishing.service.gov.uk/apps.json")).group_by { |app| app["team"] }.each do |team, applications|
+    messages = applications.map { |application|
+      github_owner_and_repo = application.dig("links", "repo_url").gsub("https://github.com/", "")
+      MessageGenerator.new(github_owner_and_repo).message
+    }.compact
 
-  message = if messages.any?
-              "Hello :paw_prints:, this is your <https://github.com/alphagov/govuk-deploy-lag-badger|regular badgering to deploy>!\n\n#{messages.join("\n")}"
-            else
-              "Hello :paw_prints:, there aren't any undeployed pull requests older than 7 days. GOOD JOB TEAM! :#{random_parrot}:"
-            end
+    message = if messages.any?
+                "Hello :paw_prints:, this is your <https://github.com/alphagov/govuk-deploy-lag-badger|regular badgering to deploy>!\n\n#{messages.join("\n")}"
+              else
+                "Hello :paw_prints:, there aren't any undeployed pull requests older than 7 days. GOOD JOB TEAM! :#{random_parrot}:"
+              end
 
-  message_payload = {
-    username: "Badger",
-    icon_emoji: ":badger:",
-    text: message,
-    mrkdwn: true,
-    channel: "#govuk-developers",
-  }
+    message_payload = {
+      username: "Badger",
+      icon_emoji: ":badger:",
+      text: message,
+      mrkdwn: true,
+      channel: team,
+    }
 
-  puts message
+    puts
+    puts "Message for #{team}:"
+    puts message
 
-  if weekend?
-    puts "Not posting anything, it's the weekend"
-    next
+    if weekend?
+      puts "Not posting anything, it's the weekend"
+      next
+    end
+
+    if currently_in_deploy_freeze?
+      puts "Not posting anything, we're in a deploy freeze period"
+      next
+    end
+
+    if ENV["REALLY_POST_TO_SLACK"] != "1"
+      puts "Not posting anything, this is a dry run"
+      next
+    end
+
+    HTTP.post(ENV.fetch("BADGER_SLACK_WEBHOOK_URL"), body: JSON.dump(message_payload))
   end
-
-  if currently_in_deploy_freeze?
-    puts "Not posting anything, we're in a deploy freeze period"
-    next
-  end
-
-  if ENV["REALLY_POST_TO_SLACK"] != "1"
-    puts "Not posting anything, this is a dry run"
-    next
-  end
-
-  HTTP.post(ENV.fetch("BADGER_SLACK_WEBHOOK_URL"), body: JSON.dump(message_payload))
 end
