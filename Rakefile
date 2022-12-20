@@ -56,23 +56,16 @@ task :run do
       MessageGenerator.new(github_owner_and_repo).message
     }.compact
 
-    message = if messages.any?
-                "Hello :paw_prints:, this is your <https://github.com/alphagov/govuk-deploy-lag-badger|regular badgering to deploy>!\n\n#{messages.join("\n")}"
-              else
-                "Hello :paw_prints:, there aren't any undeployed pull requests older than 7 days. GOOD JOB TEAM! :#{random_parrot}:"
-              end
-
-    message_payload = {
-      username: "Badger",
-      icon_emoji: ":badger:",
-      text: message,
-      mrkdwn: true,
-      channel: team,
-    }
-
-    puts
-    puts "Message for #{team}:"
-    puts message
+    message_payload = nil
+    if messages.any?
+      message_payload = {
+        username: "Badger",
+        icon_emoji: ":badger:",
+        text: "Hello :paw_prints:, this is your <https://github.com/alphagov/govuk-deploy-lag-badger|regular badgering to deploy>!\n\n#{messages.join("\n")}",
+        mrkdwn: true,
+        channel: team,
+      }
+    end
 
     if weekend?
       puts "Not posting anything, it's the weekend"
@@ -89,6 +82,6 @@ task :run do
       next
     end
 
-    HTTP.post(ENV.fetch("BADGER_SLACK_WEBHOOK_URL"), body: JSON.dump(message_payload))
+    HTTP.post(ENV.fetch("BADGER_SLACK_WEBHOOK_URL"), body: JSON.dump(message_payload)) unless message_payload.nil?
   end
 end
