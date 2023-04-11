@@ -1,3 +1,7 @@
+# This repo has been retired
+
+The apps are now deployed automatically to Kubernetes when merging PRs, therefore this repo is obsolete.
+
 # Deploy lag badger
 
 Posts a message to the GOV.UK #govuk-deploy Slack channel if there are applications
